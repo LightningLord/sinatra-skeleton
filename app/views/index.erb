@@ -1,4 +1,6 @@
 <div class="container">
-<h1>Sinatra skeleton</h1>
-
+<h1>Coaches</h1>
+<% @coaches.each do |coach| %>
+  <p><%= coach.name %></p>
+<% end %>
 </div>

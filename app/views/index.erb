@@ -1,4 +1,6 @@
 <div class="container">
-<h1>Sinatra skeleton</h1>
-
+<h1>Cohorts</h1>
+  <% @cohorts.each do |c| %>
+    <a href = "/cohorts/<%= c.id %>"><p><%= c.name %></p></a>
+  <% end %>
 </div>

@@ -1,0 +1,12 @@
+<h1><%= @cohort.name %></h1>
+<h2>From: <%= @cohort.city %></h2>
+<ul>
+<% @cohort.coaches.each do |coach| %>
+  <li><%= coach.name %></li>
+<% end %>
+</ul>
+<h2>Create a new coach in this cohort</h2>
+<form method="post" action="/cohorts/<%= @cohort.id %>/coaches">
+<input type="text" name="coach[name]" placeholder="New Coach Name">
+<input type="Submit">
+</form>

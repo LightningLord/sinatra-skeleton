@@ -1,0 +1,12 @@
+<h1><%= @cohort.name %></h1>
+
+<ul>
+  <% @cohort.coaches.each do |coach| %>
+    <li><%= coach.name %>
+      <form action="/coaches/<%= coach.id %>" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <input type="Submit" value="Delete">
+      </form>
+    </li>
+  <% end %>
+</ul>

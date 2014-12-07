@@ -1,4 +1,9 @@
 <div class="container">
-<h1>Sinatra skeleton</h1>
-
+<h1>Cohorts</h1>
+<ul>
+  <% @cohorts.each do |cohort| %>
+    <h3><li><%= cohort.name %></li></h3>
+    <p><li><%= cohort.city %></li></p>
+  <% end %>
+</ul>
 </div>

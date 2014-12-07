@@ -1,0 +1,10 @@
+<h1>Edit Cohort</h1>
+<form method="post" action="/cohorts/<%= @cohort.id %>">
+  <input type="hidden" name="_method" value="put">
+  <p>Name</p>
+  <input name="cohort[name]" value=<%= @cohort.name %> type="text">
+  <!-- bracket notation is an optimization -->
+  <p>City</p>
+  <input name="cohort[city]" value=<%= @cohort.city %> type="text">
+  <input type = "submit">
+</form>
